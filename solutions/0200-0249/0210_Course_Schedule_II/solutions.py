@@ -1,4 +1,5 @@
 import collections
+from typing import List
 
 class Solution:
     def findOrder(self, numCourses: int, prerequisites: List[List[int]]) -> List[int]:
@@ -27,3 +28,11 @@ class Solution:
             return res
         else:
             return []
+
+sol = Solution()
+
+ans = sol.findOrder(2, [[1,0]])
+print(ans)
+
+ans = sol.findOrder(4, [[1,0],[2,0],[3,1],[3,2]])
+print(ans)
