@@ -4,8 +4,7 @@ class Solution:
         
         if n % 2 == 1:
             return False
-        
-        
+                
         # scan from left to right, how many fixed right-braket
         # right-braket <= left_braket
         right_fix = 0
