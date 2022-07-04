@@ -1,0 +1,22 @@
+import pyautogui
+import time
+import sys
+from datetime import datetime
+pyautogui.FAILSAFE = False
+numMin = None
+if ((len(sys.argv)<2) or sys.argv[1].isalpha() or int(sys.argv[1])<1):
+    numMin = 4
+else:
+    numMin = int(sys.argv[1])
+#ct = 0
+while 8 <= datetime.now().hour <= 22:
+    time.sleep(numMin * 60)
+    pyautogui.move(1, 1)
+    pyautogui.move(-1, -1)    
+    #pyautogui.move(-100, -100)
+    # for i in range(0,200):
+    #     pyautogui.moveTo(0,i*4)
+    # pyautogui.moveTo(1,1)
+    # for i in range(0,3):
+    #     pyautogui.press("shift")
+    #print("Movement made at {}".format(datetime.now().time()))
